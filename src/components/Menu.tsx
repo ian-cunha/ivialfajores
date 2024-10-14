@@ -6,7 +6,7 @@ import Category from './Category';
 import styled from 'styled-components';
 
 const MenuContainer = styled.div`
-  padding: 20px;
+  padding: 5px;
   margin-top: 50px;
 `;
 
