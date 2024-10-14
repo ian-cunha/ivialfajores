@@ -27,6 +27,10 @@ const Header = styled.header`
   justify-content: space-around;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 const Logo = styled.img`
