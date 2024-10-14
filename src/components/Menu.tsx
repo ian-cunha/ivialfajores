@@ -7,7 +7,7 @@ import styled from 'styled-components';
 
 const MenuContainer = styled.div`
   padding: 20px;
-  margin-bottom: 50px;
+  margin-top: 50px;
 `;
 
 const Menu: React.FC = () => {

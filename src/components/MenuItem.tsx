@@ -1,4 +1,3 @@
-// src/components/MenuItem.tsx
 import React from 'react';
 import { MenuItem as MenuItemType } from '../types';
 import styled from 'styled-components';
@@ -9,11 +8,12 @@ interface Props {
 
 const MenuItemContainer = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   border: 1px solid #ddd;
   border-radius: 12px;
   margin: 15px;
-  padding: 15px;
+  padding: 20px;
   max-width: 600px;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -25,24 +25,16 @@ const MenuItemContainer = styled.div`
   }
 `;
 
-const Image = styled.img`
-  width: 160px;
-  height: 160px;
-  border-radius: 12px;
-  object-fit: cover;
-  margin-right: 20px;
-  border: 2px solid #FD6A34; // Border for a modern touch
-`;
-
 const Details = styled.div`
   text-align: left;
-  flex: 1;
+  width: 100%;
 `;
 
 const Title = styled.h3`
   margin: 0 0 10px 0;
   font-family: 'Arial', sans-serif; // Modern font
   color: #333;
+  font-size: 2em;
 `;
 
 const Description = styled.p`
@@ -54,13 +46,12 @@ const Description = styled.p`
 const Price = styled.span`
   font-weight: bold;
   color: #FD6A34;
-  font-size: 2rem;
+  font-size: 1.5rem;
 `;
 
 const MenuItem: React.FC<Props> = ({ item }) => {
   return (
     <MenuItemContainer>
-      <Image src={item.image} alt={item.name} />
       <Details>
         <Title>{item.name}</Title>
         <Description>{item.description}</Description>
