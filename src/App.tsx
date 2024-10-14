@@ -2,6 +2,7 @@ import React from 'react';
 import Menu from './components/Menu';
 import styled from 'styled-components';
 import logo from './assets/logo.png';
+import { FaInstagram } from 'react-icons/fa';
 
 const AppContainer = styled.div`
   text-align: center;
@@ -18,8 +19,8 @@ const Header = styled.header`
   left: 0;
   right: 0;
   z-index: 1000;
-  background: linear-gradient(135deg, #ff6b6b, #ff8e3c);
-  padding: 5px;
+  background: linear-gradient(135deg, #FFD700, #FD6A34);
+  padding: 10px;
   border-radius: 0 0 20px 20px;
   color: white;
   display: flex;
@@ -46,13 +47,21 @@ const Logo = styled.img`
   }
 `;
 
-const Title = styled.h1`
-  font-size: 2.2em;
-  font-weight: bold;
-  margin-left: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+const InstagramButton = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 1.3em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  svg {
+    margin-right: 8px;
+    font-size: 20px;
+  }
 `;
 
 const Footer = styled.footer`
@@ -77,7 +86,10 @@ const App: React.FC = () => {
     <AppContainer>
       <Header>
         <Logo src={logo} alt="Logo" />
-        <Title>Ivi Alfajores</Title>
+        <InstagramButton href="https://www.instagram.com/ivialfajores" target="_blank" rel="noopener noreferrer">
+          <FaInstagram />
+          Siga no Instagram
+        </InstagramButton>
       </Header>
 
       <Content>
